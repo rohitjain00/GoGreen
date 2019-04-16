@@ -153,3 +153,37 @@ header {
     }
     
 }
+#section3 {
+    color: #f6fbfa;
+    #volunteerFeedbackCard {
+        width : 80%;
+        margin-left: auto;
+        background-color: $greenColor;
+        text-align: center;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        .text {
+            width:50%;
+            margin: 0 auto;
+            padding: 20px 50px;
+            @include for-size(tablet-landscape-up) {
+                width: 90%;
+                padding: 10px 25px;
+            } 
+        }
+        @include for-size(tablet-landscape-up) {
+            width: 100%;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+        }
+    }
+    #volunteerCardHolder {
+        width: 10%;
+        @include for-size(tablet-landscape-up) {
+            display: none;
+        }
+    }
+    @include for-size(tablet-landscape-up) {
+        padding: 0px;
+    }
+}
