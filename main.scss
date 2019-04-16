@@ -99,6 +99,8 @@ header {
             button {
                 margin: 0 auto;
                 display: block;
+                padding: 10px 50px;
+                font-size: 1.3rem;
             }
         }
         @include for-size(tablet-landscape-up) {
