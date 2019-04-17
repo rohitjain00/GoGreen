@@ -102,6 +102,8 @@ header {
     #section2 #cardSection .card:hover {
       cursor: pointer;
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+    #section2 #cardSection .card .cardImage {
+      max-width: 50px; }
 
 #section3 {
   color: #f6fbfa; }
@@ -133,5 +135,57 @@ header {
   @media (max-width: 700px) {
     #section3 {
       padding: 0px; } }
+
+footer {
+  width: 100%;
+  background: url(./iMAGES/footer.jpg) no-repeat;
+  background-size: 100%;
+  color: white; }
+  footer .footer-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 130px; }
+  footer .footer-form {
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px; }
+    footer .footer-form input {
+      padding: 10px; }
+    footer .footer-form button {
+      background: #52be92;
+      border: 1px solid black;
+      padding: 11px 30px;
+      margin-left: -5px; }
+  footer .main-footer {
+    display: flex;
+    margin-top: 40px; }
+    footer .main-footer .footer-favicons {
+      flex: 30%;
+      text-align: center;
+      padding-top: 30px; }
+      footer .main-footer .footer-favicons img {
+        max-width: 30px; }
+    footer .main-footer .footer-list {
+      flex: 70%;
+      font-size: 1.1rem; }
+      footer .main-footer .footer-list ul {
+        display: inline-block;
+        list-style: none; }
+        footer .main-footer .footer-list ul li {
+          padding: 5px 60px; }
+          @media (max-width: 700px) {
+            footer .main-footer .footer-list ul li {
+              padding: 5px 20px; } }
+        footer .main-footer .footer-list ul .list-head {
+          font-weight: 600;
+          padding: 10px 60px; }
+          @media (max-width: 700px) {
+            footer .main-footer .footer-list ul .list-head {
+              padding: 5px 20px; } }
+    @media (max-width: 700px) {
+      footer .main-footer {
+        display: block;
+        background-image: none;
+        background: #52be92; } }
 
 /*# sourceMappingURL=output.css.map */

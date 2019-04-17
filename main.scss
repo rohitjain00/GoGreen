@@ -151,6 +151,9 @@ header {
                 // border : 2px solid #eee;
                 box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             }
+            .cardImage {
+                max-width: 50px;
+            }
         }
     }
     
@@ -188,4 +191,71 @@ header {
     @include for-size(tablet-landscape-up) {
         padding: 0px;
     }
+}
+footer {
+    width: 100%;
+    background: url(./iMAGES/footer.jpg) no-repeat;
+    background-size: 100%; 
+    color: white;
+    .footer-heading {
+        text-align: center;
+        // width: 100%;
+        font-size: 1.5rem;
+        padding-top: 130px;
+    }
+    .footer-form {
+        text-align: center;
+        padding: 30px;
+        margin-top: 30px;
+        input {
+            padding: 10px;
+            
+        }
+        button {
+            background: $greenColor;
+            border: 1px solid black;
+            padding: 11px 30px;
+            margin-left: -5px;
+        }
+    }
+    .main-footer {
+        display: flex;
+        margin-top: 40px;
+        .footer-favicons {
+            flex: 30%;
+            text-align: center;
+            padding-top: 30px;
+            img {
+                max-width: 30px;
+            }
+        }
+        .footer-list {
+            flex: 70%;
+            font-size: 1.1rem;
+            ul {
+                display:inline-block;
+                list-style: none;
+                // padding-right: 30px;
+                li {
+                    padding: 5px 60px;
+                    @include for-size(tablet-landscape-up) {
+                        padding: 5px 20px;
+                    }
+                }
+                .list-head {
+                    font-weight: 600;
+                    padding: 10px 60px;
+                    @include for-size(tablet-landscape-up) {
+                        padding: 5px 20px; 
+                    }
+                }
+            }        
+        }
+        @include for-size(tablet-landscape-up) {
+            display: block;
+            background-image: none;
+            background: $greenColor;
+        }
+    }
+
 }
