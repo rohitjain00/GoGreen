@@ -83,6 +83,8 @@ header {
     
     #threeLines {
         flex: 3%;
+        background: url(./iMAGES/lines4.png);
+        background-size: cover;
         @include for-size(tablet-landscape-up) {
             flex: 0;
             display: none;
