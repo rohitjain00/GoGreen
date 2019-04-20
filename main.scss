@@ -11,32 +11,44 @@ $desktop-width: 1024px;
       @media (min-width: 600px) { @content; }
     } @else if $size == tablet-landscape-up {
       @media (max-width: 700px) { @content; }
-    } @else if $size == desktop-up {
-      @media (min-width: 1200px) { @content; }
-    } @else if $size == big-desktop-up {
-      @media (min-width: 1800px) { @content; }
     }
   }
 body {
-    color : gray;
+    color: #6c7a73;
     section {
         padding: 20px;
     }
-    color: #6c7a73;
 }
 @mixin buttonDefault {
     border: 1.5px solid $greenColor;
     border-radius: 5px;
     padding: 10px 30px;
+    @include for-size(phone-only) {
+        padding: 10px 20px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    
 }
 .greenButton {
     @include buttonDefault();
     background:  $greenColor;
     color: white;
-}
+    &:hover {
+        background : white;   
+        transition: background-color 300ms linear;
+        color: $greenColor;
+    }
+}   
 .whiteButton {
     @include buttonDefault();
     background: white;
+    &:hover {
+        background : $greenColor;  
+        transition: background-color 300ms linear;
+        color: white;  
+    }
 }
 
 header {
@@ -74,6 +86,10 @@ header {
                 display: none;
             }
         }
+    }
+    @include for-size(phone-only) {
+        display: block;
+        text-align: center;
     }
 }
 #section1 {
@@ -145,19 +161,26 @@ header {
             text-align: center;
             padding: 20px 30px;
             flex: 1 0 calc(33.333% - 155px);
+            border-radius: 5px;
             //for precautionary measures for below border
             // border : 2px solid #fff;
             &:hover {
                 cursor: pointer;
                 // border : 2px solid #eee;
-                box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                box-shadow: 0 5px 8px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
+                transition: box-shadow 400ms linear;
             }
             .cardImage {
                 max-width: 50px;
             }
+            @include for-size(phone-only) {
+                margin: 10px 3px;
+            }
         }
     }
-    
+    @include for-size(phone-only) {
+        width: 100%;
+    }
 }
 #section3 {
     color: #f6fbfa;
@@ -166,16 +189,36 @@ header {
         margin-left: auto;
         background-color: $greenColor;
         text-align: center;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
         .text {
             width:50%;
             margin: 0 auto;
             padding: 20px 50px;
+            transition : display 200ms;
+            opacity:1;
+            transition: opacity 1s; 
+            img {
+                max-height: 100px;
+            }
             @include for-size(tablet-landscape-up) {
                 width: 90%;
                 padding: 10px 25px;
             } 
+        }   
+            
+
+        .text2 {
+            //initially display none of this 
+            display: none;
+        }
+        .arrowButtons {
+            text-align: center;
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
         @include for-size(tablet-landscape-up) {
             width: 100%;
@@ -183,12 +226,24 @@ header {
             border-bottom-left-radius: 0px;
         }
     }
+    #volunteerFeedbackSideBar {
+        width: 10%;
+        height: 100%;
+        background: url(./iMAGES/volunteerLine.png) no repeat;
+        @include for-size(tablet-landscape-up) {
+            display: none;
+        }
+
+    }
     #volunteerCardHolder {
         width: 10%;
         @include for-size(tablet-landscape-up) {
             display: none;
         }
     }
+    
+
+
     @include for-size(tablet-landscape-up) {
         padding: 0px;
     }

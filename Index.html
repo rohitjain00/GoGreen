@@ -129,10 +129,10 @@
 
 </section>
 
-<section id="section3">
-    <div id="volunteerFeedbackCard">
-        <div class="text">
-        <h2>Volunterr Feedback</h2>
+<section id="section3" class = "flip-box">
+    <div id="volunteerFeedbackCard" class = "flip-box-inner">
+        <div class="text1 text flip-box-front">
+        <h2>Volunteer Feedback</h2>
         <br>
         <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
         </span>
@@ -142,6 +142,26 @@
         <h4>Name of the person</h4>
         <br>
         of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        
+    </div>
+    <div class="text2 text flip-box-back">
+        <h2>Volunteer Feedback</h2>
+        <br>
+        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        </span>
+        <br>
+        <img src="./iMAGES/ecology-environment-digging-leaf-nature-ecofriendly-12-28927.png">
+        <br>
+        <h4>Name of the person</h4>
+        <br>
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaum.of type and scrambled it to make a type specimen book.
+        
+    </div>
+    <div class="arrowButtons">
+            <img  src="./icons/icons8-left-32.png" onclick="next();">
+            <img  src="./icons/icons8-right-arrow-32 (1).png" onclick="next();">
+    </div>
+    <div class="volunteerFeedbackSideBar">
     </div>
 </div>
 </section>
@@ -195,5 +215,28 @@
         </div>
     </div>
 </footer>
+<script>
+    function next() {
+        if (document.getElementsByClassName("text1")[0].style.display == "none") {
+            document.getElementsByClassName("text1")[0].style.display = "block";
+            document.getElementsByClassName("text2")[0].style.display = "none";
+
+        } else {
+            document.getElementsByClassName("text2")[0].style.display = "block";
+            document.getElementsByClassName("text1")[0].style.display = "none";
+
+        }
+    }
+function leftShift() {
+    document.getElementsByClassName("text1")[0].style.display = "block";
+    document.getElementsByClassName("text2")[0].style.display = "none";
+
+}
+function rightShift() {
+    document.getElementsByClassName("text2")[0].style.display = "block";
+    document.getElementsByClassName("text1")[0].style.display = "none";
+
+}
+</script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 body {
-  color: gray;
   color: #6c7a73; }
   body section {
     padding: 20px; }
@@ -10,12 +9,30 @@ body {
   padding: 10px 30px;
   background: #52be92;
   color: white; }
+  @media (max-width: 599px) {
+    .greenButton {
+      padding: 10px 20px; } }
+  .greenButton:hover {
+    cursor: pointer; }
+  .greenButton:hover {
+    background: white;
+    transition: background-color 300ms linear;
+    color: #52be92; }
 
 .whiteButton {
   border: 1.5px solid #52be92;
   border-radius: 5px;
   padding: 10px 30px;
   background: white; }
+  @media (max-width: 599px) {
+    .whiteButton {
+      padding: 10px 20px; } }
+  .whiteButton:hover {
+    cursor: pointer; }
+  .whiteButton:hover {
+    background: #52be92;
+    transition: background-color 300ms linear;
+    color: white; }
 
 header {
   display: flex;
@@ -42,6 +59,10 @@ header {
     @media (max-width: 700px) {
       header #headerRight .toHide {
         display: none; } }
+  @media (max-width: 599px) {
+    header {
+      display: block;
+      text-align: center; } }
 
 #section1 {
   width: 95%;
@@ -99,12 +120,20 @@ header {
     margin: 30px 20px;
     text-align: center;
     padding: 20px 30px;
-    flex: 1 0 calc(33.333% - 155px); }
+    flex: 1 0 calc(33.333% - 155px);
+    border-radius: 5px; }
     #section2 #cardSection .card:hover {
       cursor: pointer;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.24);
+      transition: box-shadow 400ms linear; }
     #section2 #cardSection .card .cardImage {
       max-width: 50px; }
+    @media (max-width: 599px) {
+      #section2 #cardSection .card {
+        margin: 10px 3px; } }
+@media (max-width: 599px) {
+  #section2 {
+    width: 100%; } }
 
 #section3 {
   color: #f6fbfa; }
@@ -113,21 +142,39 @@ header {
     margin-left: auto;
     background-color: #52be92;
     text-align: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px; }
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px; }
     #section3 #volunteerFeedbackCard .text {
       width: 50%;
       margin: 0 auto;
-      padding: 20px 50px; }
+      padding: 20px 50px;
+      transition: display 200ms;
+      opacity: 1;
+      transition: opacity 1s; }
+      #section3 #volunteerFeedbackCard .text img {
+        max-height: 100px; }
       @media (max-width: 700px) {
         #section3 #volunteerFeedbackCard .text {
           width: 90%;
           padding: 10px 25px; } }
+    #section3 #volunteerFeedbackCard .text2 {
+      display: none; }
+    #section3 #volunteerFeedbackCard .arrowButtons {
+      text-align: center; }
+      #section3 #volunteerFeedbackCard .arrowButtons img:hover {
+        cursor: pointer; }
     @media (max-width: 700px) {
       #section3 #volunteerFeedbackCard {
         width: 100%;
         border-top-left-radius: 0px;
         border-bottom-left-radius: 0px; } }
+  #section3 #volunteerFeedbackSideBar {
+    width: 10%;
+    height: 100%;
+    background: url(./iMAGES/volunteerLine.png) no repeat; }
+    @media (max-width: 700px) {
+      #section3 #volunteerFeedbackSideBar {
+        display: none; } }
   #section3 #volunteerCardHolder {
     width: 10%; }
     @media (max-width: 700px) {
